@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes - Glory Chapel LMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Glory Chapel LMS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="forums.html">Forums</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Quizzes</h2>
+        <section id="add-quiz">
+            <h3>Create New Quiz</h3>
+            <input type="text" id="quiz-title" placeholder="Quiz Title">
+            <div id="questions">
+                <div class="question">
+                    <input type="text" placeholder="Question">
+                    <input type="text" placeholder="Option 1">
+                    <input type="text" placeholder="Option 2">
+                    <input type="text" placeholder="Option 3">
+                    <input type="text" placeholder="Option 4">
+                    <input type="number" placeholder="Correct Option (1-4)">
+                </div>
+            </div>
+            <button onclick="addQuestion()">Add Question</button>
+            <button onclick="saveQuiz()">Save Quiz</button>
+        </section>
+        <section id="quiz-list-section">
+            <h3>Available Quizzes</h3>
+            <ul id="quiz-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Glory Chapel</p>
+    </footer>
+    <script src="js/app.js"></script>
+    <script>
+        // Load quizzes on page load
+        window.onload = function() {
+            displayQuizzes();
+        };
+    </script>
+</body>
+</html>

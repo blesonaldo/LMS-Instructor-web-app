@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forums - Glory Chapel LMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Glory Chapel LMS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="forums.html">Forums</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Discussion Forums</h2>
+        <section id="add-post">
+            <h3>Start a New Discussion</h3>
+            <input type="text" id="post-title" placeholder="Discussion Title">
+            <textarea id="post-content" placeholder="Your message"></textarea>
+            <button onclick="addPost()">Post</button>
+        </section>
+        <section id="forum-posts">
+            <h3>Discussions</h3>
+            <div id="posts-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Glory Chapel</p>
+    </footer>
+    <script src="js/app.js"></script>
+    <script>
+        // Load forums on page load
+        window.onload = function() {
+            displayPosts();
+        };
+    </script>
+</body>
+</html>

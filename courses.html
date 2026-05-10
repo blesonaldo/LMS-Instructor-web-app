@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Glory Chapel LMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Glory Chapel LMS</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="quizzes.html">Quizzes</a></li>
+                <li><a href="progress.html">Progress</a></li>
+                <li><a href="forums.html">Forums</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Courses</h2>
+        <section id="add-course">
+            <h3>Add New Course</h3>
+            <input type="text" id="course-title" placeholder="Course Title">
+            <textarea id="course-description" placeholder="Course Description"></textarea>
+            <button onclick="addCourse(document.getElementById('course-title').value, document.getElementById('course-description').value)">Add Course</button>
+        </section>
+        <section id="course-list-section">
+            <h3>Available Courses</h3>
+            <ul id="course-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Glory Chapel</p>
+    </footer>
+    <script src="js/app.js"></script>
+    <script>
+        // Load courses on page load
+        window.onload = function() {
+            displayCourses();
+        };
+    </script>
+</body>
+</html>
